@@ -1,0 +1,169 @@
+<?xml version="1.0" ?>
+<robot name="test_assembly" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find test_assembly_description)/urdf/materials.xacro" />
+  <xacro:include filename="$(find test_assembly_description)/urdf/test_assembly.trans" />
+  <xacro:include filename="$(find test_assembly_description)/urdf/test_assembly.gazebo" />
+
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0.03333333333333332 1.0779196465456927e-17 0.01583333333333333" rpy="0 0 0"/>
+      <mass value="0.8943749999999999"/>
+      <inertia ixx="0.001738" iyy="0.002965" izz="0.004581" ixy="0.0" iyz="0.0" ixz="-5e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://test_assembly_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://test_assembly_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="wheel1_1">
+    <inertial>
+      <origin xyz="-1.3877787807814457e-17 -0.0050000000000000044 1.9686697523000058e-17" rpy="0 0 0"/>
+      <mass value="0.0015782658447809456"/>
+      <inertia ixx="0.0" iyy="1e-06" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.0625 0.075 -0.0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://test_assembly_description/meshes/wheel1_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin xyz="0.0625 0.075 -0.0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://test_assembly_description/meshes/wheel1_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="wheel2_1">
+    <inertial>
+      <origin xyz="-1.3877787807814457e-17 0.0050000000000000044 -2.856848172000131e-17" rpy="0 0 0"/>
+      <mass value="0.0015782658447809456"/>
+      <inertia ixx="0.0" iyy="1e-06" izz="0.0" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.0625 -0.075 0.0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://test_assembly_description/meshes/wheel2_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin xyz="0.0625 -0.075 0.0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://test_assembly_description/meshes/wheel2_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="castor_wheel_Component1_v2_1">
+    <inertial>
+      <origin xyz="0.0 1.1853919148245112e-17 -0.0032243186582809214" rpy="0 0 0"/>
+      <mass value="0.009530712465048427"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="4e-06" ixy="0.0" iyz="0.0" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.1 -0.0 -0.005" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://test_assembly_description/meshes/castor_wheel_Component1_v2_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.1 -0.0 -0.005" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://test_assembly_description/meshes/castor_wheel_Component1_v2_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="castor_wheel_Component2_v3_1">
+    <inertial>
+      <origin xyz="0.0 -4.096460771958213e-11 -0.00587487563523713" rpy="0 0 0"/>
+      <mass value="0.008482813487624726"/>
+      <inertia ixx="1e-06" iyy="1e-06" izz="2e-06" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.1 -0.0 -0.002" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://test_assembly_description/meshes/castor_wheel_Component2_v3_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.1 -0.0 -0.002" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://test_assembly_description/meshes/castor_wheel_Component2_v3_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="castor_wheel_Component3_v4_1">
+    <inertial>
+      <origin xyz="-0.004499999925494144 -8.195638606885871e-10 -1.734723475976807e-17" rpy="0 0 0"/>
+      <mass value="0.0023245744294116788"/>
+      <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.105 0.0 0.016" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://test_assembly_description/meshes/castor_wheel_Component3_v4_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.105 0.0 0.016" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://test_assembly_description/meshes/castor_wheel_Component3_v4_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="Revolute_1" type="continuous">
+    <origin xyz="-0.0625 -0.075 0.0" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="wheel1_1"/>
+    <axis xyz="0.0 -1.0 0.0"/>
+  </joint>
+
+  <joint name="Revolute_2" type="continuous">
+    <origin xyz="-0.0625 0.075 0.0" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="wheel2_1"/>
+    <axis xyz="0.0 1.0 0.0"/>
+  </joint>
+
+  <joint name="fixed_3" type="fixed">
+    <origin xyz="0.1 0.0 0.005" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="castor_wheel_Component1_v2_1"/>
+  </joint>
+
+  <joint name="revolute_10" type="continuous">
+    <origin xyz="0.0 0.0 -0.003" rpy="0 0 0"/>
+    <parent link="castor_wheel_Component1_v2_1"/>
+    <child link="castor_wheel_Component2_v3_1"/>
+    <axis xyz="0.0 0.0 -1.0"/>
+  </joint>
+
+  <joint name="revolute_13" type="continuous">
+    <origin xyz="0.005 -0.0 -0.018" rpy="0 0 0"/>
+    <parent link="castor_wheel_Component2_v3_1"/>
+    <child link="castor_wheel_Component3_v4_1"/>
+    <axis xyz="-1.0 0.0 0.0"/>
+  </joint>
+
+</robot>
+
